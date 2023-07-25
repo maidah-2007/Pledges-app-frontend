@@ -1,0 +1,113 @@
+export enum SIBASI_SYSTEM_APP_MODULES {
+  USER = 'USER',
+  // File Upload Specific Functions
+  TEST = 'TEST',
+  USERPROFILEPICTURE = 'USERPROFILEPICTURE',
+  ITEM = 'ITEM',
+  // Specific functions for the current system
+  ORGANIZATIONLOGO = 'ORGANIZATIONLOGO',
+  ISSUES = 'ISSUES',
+  ISSUETASKS = 'ISSUETASKS',
+  PROJECT = 'PROJECT',
+  PROJECTACTIVITY = 'PROJECTACTIVITY',
+  PROJECTACTIVITYTASK = 'PROJECTACTIVITYTASK',
+  PLAN = 'PLAN',
+  KITCHEN = 'KITCHEN',
+  ORGANIZATION = 'ORGANIZATOIN',
+}
+
+export enum NOTIFICATION_TYPES {
+  ADMINMESSAGE = 'ADMINMESSAGE',
+}
+
+export enum SIBASI_CRON_JOBS {
+  DEACTIVATECONTRACT = 'DEACTIVATECONTRACT',
+  ACTIVATECONTRACT = 'ACTIVATECONTRACT',
+  SUBSCRIPTION_LICENSE_UPDATE = 'SUBSCRIPTION_LICENSE_UPDATE',
+  DAILYSTOCKUPDATE = 'DAILYSTOCKUPDATE',
+  WEEKLYREPORT = 'WEEKLYREPORT',
+}
+
+export enum USERAUTHTYPE {
+  EMAIL = 'EMAIL',
+  PHONENUMBER = 'PHONENUMBER',
+  GOOGLE = 'GOOGLE',
+}
+
+/**
+ * These are System Roles and should only be used to manage admin level access across the entire system
+ * A use case is the Sibasi Support Admin team that would need to assist users by seeing their account details
+ * This should not be used to manage organization level data
+ */
+export enum USERROLES {
+  SYSADMIN = 'SYSADMIN',
+  USERMANAGER = 'USERMANAGER',
+  SUPPORTADMIN = 'SUPPORTADMIN',
+  FINANCEADMIN = 'FINANCEADMIN',
+  USER = 'USER',
+}
+
+/**
+ * This is the role type that specifies the permissions a user has at organization level
+ * This is the primary type of role that should be used on all multi-tenant systems such as EBM Suite
+ */
+export enum ORGANIZATION_PERMISSION_TYPE {
+  OWNER = 'OWNER', // TODO: Rpalce this out, so that OWNER is set on the Organization Object and can be switched there. Use ADMIN or MANAGER below for high power actions
+  // Do not remove the below as they are referenced in the Organization Module
+  // TODO: Replace with Permissions as shown ahead
+  ADMIN = 'ADMIN',
+  MANAGER = 'MANAGER',
+  MEMBER = 'MEMBER',
+  // Specific to the app - Add/change roles here for your use case
+  ISSUELOGGER = 'ISSUELOGGER',
+  ISSUERESOLVER = 'ISSUERESOLVER',
+
+  MANAGEORGANIZATION = 'MANAGEORGANIZATION',
+  MANAGEWORKSPACES = 'MANAGEWORKSPACES',
+  MANAGEISSUES = 'MANAGEISSUES',
+  MANAGEPROJECTACTIVITY = 'MANAGEPROJECTACTIVITY',
+  SALESMANAGER = 'SALESMANAGER',
+  // EXPENDITUREMANAGER = 'EXPENDITUREMANAGER',
+  // ORDERPROCESSOR = 'ORDERPROCESSOR',
+  // DELIVERY = 'DELIVERY',
+  // PAYROLLPROCESSOR = 'PAYROLLPROCESSOR',
+  // KITCHEN = 'KITCHEN',
+  // INVENTORYMANAGER = 'INVENTORYMANAGER',
+  // INVENTORYMANAGER = 'INVENTORYMANAGER',
+}
+
+export enum SIBASI_SMS_SERVICE_OPTIONS {
+  UjumbeSMS = 'UjumbeSMS',
+  AdvantaSMS = 'AdvantaSMS',
+}
+
+export enum SIBASI_EMAIL_SERVICE_OPTIONS {
+  SENDGRID = 'SENDGRID',
+  MAILCHIMP = 'MAILCHIMP',
+}
+
+export enum SIBASI_EMAIL_SMS_TYPES {
+  OTP = 'OTP',
+  VERIFY_EMAIL = 'VERIFY_EMAIL',
+  NEW_ACCOUNT_EMAIL = 'NEW_ACCOUNT_EMAIL',
+  PASSWORD_RESET = 'PASSWORD_RESET',
+  CONTROLLER_INITIATED = 'CONTROLLER_INITIATED',
+  REFERRAL_EMAIL = 'REFERRAL_EMAIL',
+  ORGANIZATION_INVITATION = 'ORGANIZATION_INVITATION',
+  APP_ADMIN_NOTIFICATION = 'APP_ADMIN_NOTIFICATION',
+  APP_USER_NOTIFICATION = 'APP_USER_NOTIFICATION',
+  STATUS_REPORT = 'STATUS_REPORT',
+}
+export enum ORGANIZATIONTYPES {
+  SOLE_PROPRIATOR = 'SOLE_PROPRIATOR',
+  PRIVATE_CORPORATION = 'PRIVATE_CORPORATION',
+  PUBLIC_CORPORATION = 'PUBLIC_CORPORATION',
+  NON_PROFIT_ORGANIZATION = 'NON_PROFIT_ORGANIZATION',
+  GOVERNMENT_ENTITY = 'GOVERNMENT_ENTITY',
+  PARTNERSHIP = 'PARTNERSHIP',
+}
+
+export enum SubscribedEmails {
+  DAILYSTOCKUPDATE = 'DAILYSTOCKUPDATE',
+  WEEKLYSTOCKUPDATE = 'WEEKLYSTOCKUPDATE',
+}
