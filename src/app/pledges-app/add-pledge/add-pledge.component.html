@@ -1,0 +1,107 @@
+<div class="container-fluid">
+  <div class="row p-3">
+    <div class="col-12 p-3">
+      <h4 class="text-body-secondary text-center">join us</h4>
+    </div>
+  </div>
+
+  <!-- < [formGroup]="loginForm" > -->
+  <form #form="ngForm" [formGroup]="pledgeForm" >
+    <div class="row">
+      <label for="colFormLabelLg" class="col-sm- col-form-label col-form-label"
+        >PLedges</label></div>
+      <select
+
+        class="form-select select ms-3 w-50"
+        aria-label="Default select example " formControlName="PledgeType"
+      >
+        <option selected>pledges</option>
+        <option value="1">food support</option>
+        <option value="2">chidlen clothes</option>
+        <option value="3">living place</option>
+      </select>
+      <br>
+
+    <div class="row mb-3 donate">
+      <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label"
+        >Name</label
+      >
+      <div class="col-sm-4">
+        <input
+          type="text text_fields"
+          class="form-control form-control"
+          id="colFormLabelSm"
+          formControlName="ApplicantName"
+        />
+      </div>
+    </div>
+
+    <div class="row mb-3 donate">
+      <label
+        for="colFormLabelSm"
+        class="col-sm-2 col-form-label col-form-label"
+      >
+        Number</label
+      >
+      <div class="col-sm-4">
+        <input
+          type="tel"
+          class="form-control form-control"
+          id="colFormLabelSm"
+          formControlName="PhoneNumber"
+        />
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <label for="colFormLabel" class="col-sm-2 col-form-label">Email</label>
+      <div class="col-sm-4">
+        <input
+          type="text_fields"
+          class="form-control"
+          id="colFormLabel"
+          formControlName="Email"
+        />
+      </div>
+    </div>
+    <div class="row">
+      <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label"
+        >current</label
+      >
+      <div class="col-sm-4">
+        <select
+          class="form-select form-select-sm"
+          aria-label=".form-select-sm example" formControlName="Currency"
+        >
+          <option selected>currency</option>
+          <option value="1">USD</option>
+          <option value="2">KSH</option>
+          <option value="3">FRCS</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row">
+      <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label"
+        >Amount</label
+      >
+      <div class="col-sm-4">
+        <input
+          type="number"
+          class="form-control form-control-lg"
+          id="colFormLabelLg"
+          formControlName="PledgeAmount"
+        />
+      </div>
+    </div>
+
+  </form>
+  <br />
+  <input
+    class="btn btn-primary"
+    type="submit"
+    value="Submit"
+    width="25px"
+    (click)="submitForm()"
+  />
+</div>
